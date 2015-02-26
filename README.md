@@ -81,3 +81,46 @@ intelmq\
 \intelmq\bots\parser\abusech\parser_zeus_binaries.py
 \intelmq\bots\parser\abusech\parser_zeus_dropzones.py
 ```
+
+
+## Hierarquia de Diretórios da Instalação
+
+Directório de ficheiros de configuração:
+```
+/etc/intelmq/
+```
+
+Directório de PID Files:
+```
+/var/run/intelmq/
+```
+
+
+        bin\
+                intelmqctl
+        \lib
+                bot.py
+                cache.py
+                message.py
+                pipeline.py
+                utils.py
+        \bots
+                \collector
+                     \<nome do bot>
+		collector.py
+                \parser
+                     \<nome do bot>
+		parser.py
+                \expert
+                     \<nome do bot>
+		expert.py
+                \output
+                     \<nome do bot>
+		output.py
+	       BOTS
+        \conf
+                pipeline.conf
+                runtime.conf
+                startup.conf
+                system.conf
+```
