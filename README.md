@@ -12,7 +12,7 @@
 
 # Rules
 
-### Nome das variáveis
+## Nome das variáveis
 Nome das variáveis deve ser claro e percetível, não sendo permitido o uso de acrónimos, entre outras curtas representações de palavras.
 
 **Consultar:** Style Guide for Python Code - https://www.python.org/dev/peps/pep-0008/
@@ -37,14 +37,14 @@ n_evt = evt.deep_copy()
 local_event = event.deep_copy()
 ```
 
-### Harmonização de Eventos
+## Harmonização de Eventos
 
 É obrigatório respeitar a harmonização de eventos. Qualquer ‘key’ deve ser representada sempre em minúsculas.
 
 **Consultar:** IntelMQ Data Harmonization - https://github.com/certtools/intelmq/blob/master/docs/DataHarmonization.md
 
 
-### Hierarquia de Diretórios no Repositório
+## Hierarquia de Diretórios no Repositório
 ```
 intelmq\
   bin\
