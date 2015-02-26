@@ -15,24 +15,24 @@
 ## Nome das variáveis
 Nome das variáveis deve ser claro e percetível, não sendo permitido o uso de acrónimos, entre outras curtas representações de palavras.
 
-**Consultar:** Style Guide for Python Code - https://www.python.org/dev/peps/pep-0008/
+Consultar: Style Guide for Python Code - https://www.python.org/dev/peps/pep-0008/
 
-**Exemplo 1 - WRONG:**
+Exemplo 1 - WRONG:
 ```
 def process_line(self, evt):
     line = evt["raw"]["line"]
 ```
-**Exemplo 1 - RIGHT:**
+Exemplo 1 - RIGHT:
 ```
 def process_line(self, event):
     line = event["raw"]["line"]
 ```
 
-**Exemplo 2 - WRONG:**
+Exemplo 2 - WRONG:
 ```
 n_evt = evt.deep_copy()
 ```
-**Exemplo 2 - RIGHT:**
+Exemplo 2 - RIGHT:
 ```
 local_event = event.deep_copy()
 ```
