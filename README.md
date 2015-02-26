@@ -41,7 +41,7 @@ local_event = event.deep_copy()
 
 É obrigatório respeitar a harmonização de eventos. Qualquer ‘key’ deve ser representada sempre em minúsculas.
 
-**Consultar:** IntelMQ Data Harmonization - https://github.com/certtools/intelmq/blob/master/docs/DataHarmonization.md
+Consultar: IntelMQ Data Harmonization - https://github.com/certtools/intelmq/blob/master/docs/DataHarmonization.md
 
 
 ## Hierarquia de Diretórios no Repositório
@@ -75,7 +75,7 @@ intelmq\
     startup.conf
     system.conf
 ```
-**Nota:** assumindo que foi criado um bot para o feed ‘Abuse.ch Zeus’ é necessário criar diferentes parsers para os respectivos tipos de eventos (C&C, Binaries, Dropzones). Neste caso, a hierarquia ‘intelmq\bots\parser\abusech\parser.py’ não seria adequada porque são necessários mais parsers como referido anteriormente. A solução para estes casos é continuar a usar a mesma hierarquia, apenas acrescentando ao nome do ficheiro ‘_zeus_cc.py’, ‘_zeus_binaries.py’ e ‘_zeus_dropzones.py’. O resultado final na hierarquia será:
+Nota: assumindo que foi criado um bot para o feed ‘Abuse.ch Zeus’ é necessário criar diferentes parsers para os respectivos tipos de eventos (C&C, Binaries, Dropzones). Neste caso, a hierarquia ‘intelmq\bots\parser\abusech\parser.py’ não seria adequada porque são necessários mais parsers como referido anteriormente. A solução para estes casos é continuar a usar a mesma hierarquia, apenas acrescentando ao nome do ficheiro ‘_zeus_cc.py’, ‘_zeus_binaries.py’ e ‘_zeus_dropzones.py’. O resultado final na hierarquia será:
 ```
 \intelmq\bots\parser\abusech\parser_zeus_cc.py
 \intelmq\bots\parser\abusech\parser_zeus_binaries.py
