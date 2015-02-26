@@ -95,32 +95,14 @@ Directório de PID Files:
 /var/run/intelmq/
 ```
 
-
-        bin\
-                intelmqctl
-        \lib
-                bot.py
-                cache.py
-                message.py
-                pipeline.py
-                utils.py
-        \bots
-                \collector
-                     \<nome do bot>
-		collector.py
-                \parser
-                     \<nome do bot>
-		parser.py
-                \expert
-                     \<nome do bot>
-		expert.py
-                \output
-                     \<nome do bot>
-		output.py
-	       BOTS
-        \conf
-                pipeline.conf
-                runtime.conf
-                startup.conf
-                system.conf
+Directório de ficheiros de logs:
 ```
+/var/log/intelmq/
+````
+
+Directório de ficheiros adicionais usados por bots:
+```
+/var/lib/intelmq/
+````
+
+
