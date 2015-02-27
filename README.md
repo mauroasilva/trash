@@ -169,7 +169,12 @@ class Bot(object):
 ```
 
 ## LICENCE Rules
-Licença e autores não deve estar contida nos ficheiros de código...apenas no ficheiro LICENCE na root do repositório.
+
+Existe na raíz do repositório um ficheiro LICENCE e um ficheiro AUTHORS.
+* O ficheiro LICENCE não será modificado porque a licença está definida como AGPL (actualizar caso haja uma nova versão da mesma licença).
+* O ficheiro AUTHORS deve ser sempre modificado sempre que haja um novo contributo de uma pessoa ou entidade que ainda não faça parte da lista.
+
+Nota: licença e autores não pode estar contida nos ficheiros de código.
 
 ## Useless Code
 
