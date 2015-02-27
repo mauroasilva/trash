@@ -15,7 +15,7 @@
 ## Nome das variáveis
 Nome das variáveis deve ser claro e percetível, não sendo permitido o uso de acrónimos, entre outras curtas representações de palavras.
 
-Consultar: Style Guide for Python Code - https://www.python.org/dev/peps/pep-0008/
+Consultar: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 
 Exemplo 1 - WRONG:
 ```
@@ -117,14 +117,14 @@ próprio feed. Se for necessário dar algum contexto acrescentando palavras, ent
 
 Exemplo sem palavras de contexto:
 ```
-dragonresearchgroup
-malwaredomainlist
+intelmq/bots/parser/dragonresearchgroup
+intelmq/bots/parser/malwaredomainlist
 ```
 
 Exemplo com palavras de contexto:
 ```
-cymru_full_bogons
-taichung_city_netflow
+intelmq/bots/parser/cymru_full_bogons
+intelmq/bots/parser/taichung_city_netflow
 ```
 
 
@@ -202,7 +202,6 @@ Nome da class do bot (sub-class) deve ser o seu tipo. No caso de estarmos a cria
 
 ```
     class Expert(Bot):
-    
         ....
         
     if __name__ == "__main__":
@@ -212,10 +211,12 @@ Nome da class do bot (sub-class) deve ser o seu tipo. No caso de estarmos a cria
 
 ## Style Code
 
-Qualquer componente do IntelMQ na linguagem Python deve seguir o PEP0008.
+Qualquer componente do IntelMQ na linguagem Python tem que seguir [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/).
 
 ## Back-end independent
-Qualquer código do IntelMQ Core, à excepção do ficheiro pipeline.py deve ser independente da tecnolgia de mensagens (Redis, RabbitMQ, etc...)
+
+Qualquer componente do IntelMQ Core, à excepção do ficheiro pipeline.py deve ser independente da tecnolgia de mensagens (Redis, RabbitMQ, etc...)
 
 ## Compatibility
+
 O IntelMQ Core (incluíndo o intelmqctl) deve ser compatível com o IntelMQ Manager, IntelMQ UI e IntelMQ Mailer
