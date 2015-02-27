@@ -178,48 +178,41 @@ Nota: licença e autores não pode estar contida nos ficheiros de código.
 
 ## Useless Code
 
-Não pode existir código comentado.
-<Tens de ter cuidado como escreves isto em Inglês... porque depois pode parecer que não queres que o pessoal comente o código, o que é mentira... tu queres que o código esteja comentado para ser mais fácil de ler.>
+Código que não esteja a ser usado (estando presente como comentário) ou que esteja deprecated, não pode estar presente na versão disponível no repositório.
 
 ## Log Messages Format
-Mensagens de log devem ser claras e bem escritas. Não devem ser em maiusculas nem tudo em minusculas. Deve ser uma frase que faça sentido para o utilizador
-<Concordo. E além disto têm de seguir o padrão já implementado, ou seja: <Timestamp> - <Nome do bot> - <Nivel> - <Mensagem>. Que é para o caso de alguém que estende a lib de log e se lembra de meter uma cena marada qualquer.>
+Mensagens de log devem ser claras e formatadas de acordo com o formato definido no código e seguidamente apresentado.
+
+Formato:
+```
+<Timestamp> - <Nome do bot> - <Nivel> - <Mensagem>
+```
+
+Algumas regras:
+* A mensagem deve seguir as regras normais de uma frase, iniciando em maiúscula e terminando com ponto final.
+* A frase deve ser explicativa do problema ou informação a transmitir para um utilizador que não tenha conhecimento do código.
 
 ## Unicode
-Garantir que todos os valores que vem de uma fonte externa são tranformados em unicode.
-
-## Import Rules
-Tentar ao máximo não estar sempre a repetir os mesmos imports caso as classes derivem umas das outras...basta um import na class base.
-<Hmm... O que queres dizer com isto?
-
-Prefiro:
-from intelmq.message import Event
-from Intelmq.message import Report
-
-ou
-
-from intelmq.message import Event,Report
-
-do que
-
-from intelmq.message import *
->
+* Qualquer objecto do IntelMQ (Event, Report, etc..) deve estar no formato unicode.
+* É necessário garantir que todos os dados que são recebidos de uma fonte externa são tranformados em unicode antes de serem introduzidos nos objectos do IntelMQ.
 
 ## Classes Names
 
 Nome da class do bot (sub-class) deve ser o seu tipo. No caso de estarmos a criar um expert da Cymru, a class deve ser declarada da seguinte forma:
 
-    class Expert(ExpertBot):
+```
+    class Expert(Bot):
     
         ....
         
     if __name__ == "__main__":
         bot = Expert(sys.argv[1])
         bot.start()
-    
+```    
 
-## Private Methods Rules
-Métodos privados com '_'
+## Style Code
+
+Qualquer componente do IntelMQ na linguagem Python deve seguir o PEP0008.
 
 ## Back-end independent
 Qualquer código do IntelMQ Core, à excepção do ficheiro pipeline.py deve ser independente da tecnolgia de mensagens (Redis, RabbitMQ, etc...)
