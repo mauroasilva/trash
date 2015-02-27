@@ -112,6 +112,21 @@ Directório de ficheiros adicionais usados por bots:
 * ser representado sempre em minúsculas e separado por underscores sempre que o nome contenha 2 palavras;
 * ser auto explicativo do conteúdo da pasta ou ficheiro;
 
+No caso específico do nome dos directórios dos bots, o nome deve corresponder ao nome do
+próprio feed. Se for necessário dar algum contexto acrescentando palavras, então nesse caso as palavras são separadas por '_'.
+
+Exemplo sem palavras de contexto:
+```
+dragonresearchgroup
+malwaredomainlist
+```
+
+Exemplo com palavras de contexto:
+```
+cymru_full_bogons
+taichung_city_netflow
+```
+
 
 ## Directórios e Ficheiros Hard-coded
 Quaisquer directórios ou ficheiros hard-coded devem corresponder aos directórios ou ficheiros default do IntelMQ, respeitando por isso toda a hierarquia.
