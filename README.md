@@ -10,7 +10,7 @@
 * Disponibilizar uma HTTP RESTFUL API para interação com o IntelMQ
 
 
-# Rules
+# Regras
 
 ## Nome das variáveis
 Nome das variáveis deve ser claro e percetível, não sendo permitido o uso de acrónimos, entre outras curtas representações de palavras.
