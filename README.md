@@ -129,9 +129,44 @@ taichung_city_netflow
 
 
 ## Directórios e Ficheiros Hard-coded
-Quaisquer directórios ou ficheiros hard-coded devem corresponder aos directórios ou ficheiros default do IntelMQ, respeitando por isso toda a hierarquia.
-Directórios default de instalação que devem ser tidos em conta by default nas configurações e em PATHs hard-coded.
-<Explicar melhor... Não percebi à primeira.>
+
+Quaisquer directórios ou ficheiros hard-coded devem corresponder aos directórios ou ficheiros default do IntelMQ, respeitando a "Hierarquia de Diretórios da Instalação".
+
+Exemplo (intelmq/lib/bot.py):
+```
+import re
+import sys
+import json
+import time
+import ConfigParser
+import signal
+from Queue import Queue
+from Queue import Empty as EmptyQueue
+from threading import Thread
+from time import sleep
+
+from intelmq.lib.message import Event
+from intelmq.lib.pipeline import Pipeline
+from intelmq.lib.utils import decode, log
+from inspect import getcallargs
+
+SYSTEM_CONF_FILE = "/etc/intelmq/system.conf"
+PIPELINE_CONF_FILE = "/etc/intelmq/pipeline.conf"
+RUNTIME_CONF_FILE = "/etc/intelmq/runtime.conf"
+DEFAULT_LOGGING_PATH = "/var/log/intelmq/"
+DEFAULT_LOGGING_LEVEL = "INFO"
+LOGGER = None
+
+QUEUE_TIMEOUT = 5
+
+class Bot(object):
+
+	def __init__(self, bot_id,in_thread=False,out_thread=False, n_threads = 1):
+		
+		self.message_counter = 0
+
+		self.check_bot_id(bot_id)
+```
 
 ## LICENCE Rules
 Licença e autores não deve estar contida nos ficheiros de código...apenas no ficheiro LICENCE na root do repositório.
